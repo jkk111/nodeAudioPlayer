@@ -28,7 +28,6 @@ io.on('connection', function(socket){
 	//Connection on join set user room
 	//if user responds with a room change room
 	socket.room = shortid.generate();
-	io.to(socket.room).emit('connects', "Connected: "+connected);
 	socket.broadcast.to(socket.id).emit('handshake', socket.room);
 	socket.join(socket.room);
 	io.to(socket.room).emit('id',socket.room);
