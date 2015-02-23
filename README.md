@@ -20,10 +20,8 @@ Controls are as follows
 
 # Requirements
 NodeJS
-	-SocketIO
+	SocketIO
 
-	-shortID
+	shortID
 	
-	-Express
-=======
->>>>>>> parent of fa4a90f... updated readme
+	Express
