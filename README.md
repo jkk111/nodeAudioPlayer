@@ -1,7 +1,7 @@
 # nodeAudioPlayer
 Node multiclient audio player
 
-Uses HTML5 audio and Node.js to create a multiclient audio player for synchronised listening.
+Uses HTML5 audio and nodejs to create a multiclient audio player for synchronised listening.
 
 Works by using socket.io and a master to send messages between the node server and the clients.
 
@@ -16,6 +16,7 @@ Controls are as follows
 /stop - stops the track playing
 
 /destroy - destroys the html on all clients pages
+<<<<<<< HEAD
 
 # Requirements
 NodeJS
@@ -24,3 +25,5 @@ NodeJS
 	-shortID
 	
 	-Express
+=======
+>>>>>>> parent of fa4a90f... updated readme
