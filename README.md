@@ -25,3 +25,8 @@ SocketIO
 shortID
 	
 Express
+
+#Installation
+Assuming node is installed, run npm install in the root directory to get dependancies.
+
+Once finished just run node server.js
