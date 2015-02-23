@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>    
+  <link rel="stylesheet" type="text/css" href="static/slave.css">
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script>
+    var socket = io();
+    $('form').submit(function(){
+      socket.emit('chat message', $('#m').val());
+      $('#m').val('');
+      return false;
+    });
+    socket.on('command', function(msg){
+      if(msg=="#play"){
+        document.getElementById("track").play();
+        $("#pic").css("display","block");
+      }
+      else if(msg=="#stop"){
+        document.getElementById("track").pause();
+        $("#pic").css("display","none");
+      }
+      else if(msg=="#destroy"){
+        $("body").html("");
+      }
+    });
+
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    var room = getParameterByName('room');
+    if(room!=""){
+      socket.emit("room", room);
+    }
+    //Gets room from url if one is specified
+  </script>
+  <script type="text/javascript">
+    function safariFix(){
+      //Audio can be played in safari if played by a touch event first
+      var fix = document.getElementById("safarifix");
+    }
+  </script>
+  <script type="text/javascript"></script>
+  <script src="static/ready.js"></script>
+  <title>NodeAudio Slave</title>
+</head>
+<body>
+  <div id="playingDisplay" class="centered">
+    <img src="static/track.png" id="pic">
+    <div id="textDisp" class="center">
+      <p><h2>Not Playing</h2></p>
+    </div>
+    <button id="startButton" class="centered" onclick="fix.play()">Get Started!</button>
+    <audio id="safarifix">
+      <source src="static/silent.wav" type="audio/wav">
+      </audio>
+      <audio id="track">
+        <source src="static/skyrim.m4a" type="audio/mpeg">
+          <source src="static/skyrim.ogg" type="audio/ogg">
+            <source src="static/skyrim.wav" type="audio/wav">
+             Sorry your browser is not compatible please upgrade!
+           </audio>
+         </body>
+         </html>
+         </html>

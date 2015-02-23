@@ -1,0 +1,59 @@
+/* line 1, slave.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #999;
+}
+
+/* line 8, slave.scss */
+#startButton {
+  width: 80%;
+  height: 30%;
+  background-color: white;
+  z-index: 10000;
+}
+
+/* line 14, slave.scss */
+.centered {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+/* line 24, slave.scss */
+.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+/* line 33, slave.scss */
+#playingDisplay {
+  width: 80%;
+  height: 80%;
+  background-color: red;
+}
+/* line 37, slave.scss */
+#playingDisplay p {
+  position: absolute;
+}
+/* line 40, slave.scss */
+#playingDisplay #textDisp {
+  position: absolute;
+}
+/* line 43, slave.scss */
+#playingDisplay #pic {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  display: none;
+}

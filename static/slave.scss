@@ -1,0 +1,50 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin:0;
+	background-color: #999;
+}
+
+#startButton{
+	width: 80%;
+	height: 30%;
+	background-color: white;
+	z-index: 10000;
+}
+.centered{
+	position: fixed;
+	left: 50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+}
+
+.center{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+#playingDisplay{
+	width: 80%;
+	height: 80%;
+	background-color: red;
+	p{
+		position: absolute;
+	}
+	#textDisp{
+		position: absolute;
+	}
+	#pic{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		z-index: 100;
+		display: none;
+	}
+}
