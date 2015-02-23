@@ -16,12 +16,12 @@ Controls are as follows
 /stop - stops the track playing
 
 /destroy - destroys the html on all clients pages
-<<<<<<< HEAD
 
 # Requirements
 NodeJS
-	SocketIO
 
-	shortID
+SocketIO
+
+shortID
 	
-	Express
+Express
